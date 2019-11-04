@@ -1,10 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View, StatusBar } from 'react-native';
+import { white } from 'ansi-colors';
 
 export default function App() {
+
   return (
     <View style={styles.container}>
-      <Text>Calculator App baby!</Text>
+      <StatusBar barStyle = "light-content" hidden = {false} translucent = {true}/>
+      <Text style={styles.text}>Calculator App baby!</Text>
     </View>
   );
 }
@@ -12,8 +15,12 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'black',
+    color: 'white',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  text: {
+    color: '#fff'
   },
 });
