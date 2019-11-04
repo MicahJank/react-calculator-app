@@ -1,6 +1,5 @@
 import React from 'react';
-import { Platform, StyleSheet, Text, View, StatusBar } from 'react-native';
-import { white } from 'ansi-colors';
+import { StyleSheet, Text, View, StatusBar } from 'react-native';
 
 export default function App() {
 
