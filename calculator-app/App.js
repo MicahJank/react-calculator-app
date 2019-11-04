@@ -3,7 +3,6 @@ import { StyleSheet, Text, View, StatusBar } from 'react-native';
 
 import Display from './components/Display.js';
 import ButtonContainer from './components/ButtonContainer.js';
-import Button from './components/Button.js';
 
 export default function App() {
 
