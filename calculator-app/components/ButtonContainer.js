@@ -12,7 +12,21 @@ const ButtonContainer = () => {
             <Button button={styles.otherButton} style={styles.otherText} buttonText={'+/-'} />
             <Button button={styles.otherButton} style={styles.otherText} buttonText={'%'} />
             <Button button={styles.operatorButton} style={styles.operatorText} buttonText={'/'} />
-            <Button button={styles.operatorButton} style={styles.operatorText} buttonText={'/'} />
+            <Button button={styles.numberButton} style={styles.numberText} buttonText={'7'} />
+            <Button button={styles.numberButton} style={styles.numberText} buttonText={'8'} />
+            <Button button={styles.numberButton} style={styles.numberText} buttonText={'9'} />
+            <Button button={styles.operatorButton} style={styles.operatorText} buttonText={'x'} />
+            <Button button={styles.numberButton} style={styles.numberText} buttonText={'4'} />
+            <Button button={styles.numberButton} style={styles.numberText} buttonText={'5'} />
+            <Button button={styles.numberButton} style={styles.numberText} buttonText={'6'} />
+            <Button button={styles.operatorButton} style={styles.operatorText} buttonText={'-'} />
+            <Button button={styles.numberButton} style={styles.numberText} buttonText={'1'} />
+            <Button button={styles.numberButton} style={styles.numberText} buttonText={'2'} />
+            <Button button={styles.numberButton} style={styles.numberText} buttonText={'3'} />
+            <Button button={styles.operatorButton} style={styles.operatorText} buttonText={'+'} />
+            <Button button={styles.numberButton} style={styles.numberText} buttonText={'0'} />
+            <Button button={styles.numberButton} style={styles.numberText} buttonText={'.'} />
+            <Button button={styles.operatorButton} style={styles.operatorText} buttonText={'='} />
         </View>
     );
 };
@@ -22,7 +36,8 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         flexWrap: 'wrap',
-        justifyContent: 'space-around',
+        flex: 1,
+        justifyContent: 'space-between',
     },
     numberText: {
         color: '#fff',
@@ -43,8 +58,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#333333',
         borderColor: '#fff',
         borderRadius: 50,
-        width: 70,
-        height: 70
+        width: 75,
+        height: 75
     },
     operatorButton: {
         display: 'flex',
@@ -53,8 +68,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#FE9F0A',
         borderColor: '#fff',
         borderRadius: 50,
-        width: 70,
-        height: 70
+        width: 75,
+        height: 75,
+        marginHorizontal: 5
     },
     otherButton: {
         display: 'flex',
@@ -63,8 +79,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#333333',
         borderColor: '#000',
         borderRadius: 50,
-        width: 70,
-        height: 70
+        width: 75,
+        height: 75,
+        marginHorizontal: 5
     }
 })
 
