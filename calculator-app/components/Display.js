@@ -7,7 +7,7 @@ const Display = ( { displayState }) => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.display}>{displayState.currentNum}</Text>
+            <Text style={styles.display}>{displayState}</Text>
         </View>
     );
 };

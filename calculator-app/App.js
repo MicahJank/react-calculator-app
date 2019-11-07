@@ -15,8 +15,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar barStyle = "light-content" hidden = {false} translucent = {true}/>
-      <Display displayState={state} />
-      <ButtonContainer />
+      <Display displayState={state.currentNum} />
+      <ButtonContainer state={state} setState={setState} />
     </View>
   );
 }

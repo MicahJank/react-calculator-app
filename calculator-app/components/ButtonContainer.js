@@ -4,38 +4,59 @@ import { StyleSheet, View } from 'react-native';
 
 import Button from './Button.js';
 
-const ButtonContainer = () => {
+const ButtonContainer = ( { state, setState } ) => {
+
+
+    // button functions
+    const numberButtonHandler = (e) => {
+        console.log(e.target.id)
+        // if(!state.operation) {
+        //     setState({
+        //         ...state,
+        //         currentNum: `${state.currentNum}`
+        //     })
+        // }
+    }
+
+    const operatorButtonHandler = () => {
+
+    }
+
+    const otherButtonHandler = () => {
+
+    }
 
     return (
+        // TODO: Change division symbol to be an icon not a computer button
         <View style={styles.container}>
             <View style={styles.row}>
-                <Button button={styles.otherButton} style={styles.otherText} buttonText={'AC'} />
-                <Button button={styles.otherButton} style={styles.otherText} buttonText={'+/-'} />
-                <Button button={styles.otherButton} style={styles.otherText} buttonText={'%'} />
-                <Button button={styles.operatorButton} style={styles.operatorText} buttonText={'÷'} />
+                <Button onPressHandler={otherButtonHandler} id={'AC'} button={styles.otherButton} style={styles.otherText} buttonText={'AC'} />
+                <Button onPressHandler={otherButtonHandler} id={'+/-'} button={styles.otherButton} style={styles.otherText} buttonText={'+/-'} />
+                <Button onPressHandler={otherButtonHandler} id={'%'} button={styles.otherButton} style={styles.otherText} buttonText={'%'} />
+                <Button onPressHandler={operatorButtonHandler} id={'÷'} button={styles.operatorButton} style={styles.operatorText} buttonText={'÷'} />
             </View>
             <View style={styles.row}>
-                <Button button={styles.numberButton} style={styles.numberText} buttonText={'7'} />
-                <Button button={styles.numberButton} style={styles.numberText} buttonText={'8'} />
-                <Button button={styles.numberButton} style={styles.numberText} buttonText={'9'} />
-                <Button button={styles.operatorButton} style={styles.operatorText} buttonText={'x'} />
+                <Button onPressHandler={numberButtonHandler} id={'7'} button={styles.numberButton} style={styles.numberText} buttonText={'7'} />
+                <Button onPressHandler={numberButtonHandler} id={'8'} button={styles.numberButton} style={styles.numberText} buttonText={'8'} />
+                <Button onPressHandler={numberButtonHandler} id={'9'} button={styles.numberButton} style={styles.numberText} buttonText={'9'} />
+                <Button onPressHandler={operatorButtonHandler} id={'x'} button={styles.operatorButton} style={styles.operatorText} buttonText={'x'} />
             </View>
             <View style={styles.row}>
-                <Button button={styles.numberButton} style={styles.numberText} buttonText={'4'} />
-                <Button button={styles.numberButton} style={styles.numberText} buttonText={'5'} />
-                <Button button={styles.numberButton} style={styles.numberText} buttonText={'6'} />
-                <Button button={styles.operatorButton} style={styles.operatorText} buttonText={'-'} />
+                <Button onPressHandler={numberButtonHandler} id={'4'} button={styles.numberButton} style={styles.numberText} buttonText={'4'} />
+                <Button onPressHandler={numberButtonHandler} id={'5'} button={styles.numberButton} style={styles.numberText} buttonText={'5'} />
+                <Button onPressHandler={numberButtonHandler} id={'6'} button={styles.numberButton} style={styles.numberText} buttonText={'6'} />
+                <Button onPressHandler={operatorButtonHandler} id={'-'} button={styles.operatorButton} style={styles.operatorText} buttonText={'-'} />
             </View>
             <View style={styles.row}>
-                <Button button={styles.numberButton} style={styles.numberText} buttonText={'1'} />
-                <Button button={styles.numberButton} style={styles.numberText} buttonText={'2'} />
-                <Button button={styles.numberButton} style={styles.numberText} buttonText={'3'} />
-                <Button button={styles.operatorButton} style={styles.operatorText} buttonText={'+'} />
+                <Button onPressHandler={numberButtonHandler} id={'1'} button={styles.numberButton} style={styles.numberText} buttonText={'1'} />
+                <Button onPressHandler={numberButtonHandler} id={'2'} button={styles.numberButton} style={styles.numberText} buttonText={'2'} />
+                <Button onPressHandler={numberButtonHandler} id={'3'} button={styles.numberButton} style={styles.numberText} buttonText={'3'} />
+                <Button onPressHandler={operatorButtonHandler} id={'+'} button={styles.operatorButton} style={styles.operatorText} buttonText={'+'} />
             </View>
             <View style={styles.row}>
-                <Button button={styles.zeroButton} style={styles.zeroText} buttonText={'0'} />
-                <Button button={styles.numberButton} style={styles.numberText} buttonText={'.'} />
-                <Button button={styles.operatorButton} style={styles.operatorText} buttonText={'='} />
+                <Button onPressHandler={numberButtonHandler} id={'0'} button={styles.zeroButton} style={styles.zeroText} buttonText={'0'} />
+                <Button onPressHandler={numberButtonHandler} id={'.'} button={styles.numberButton} style={styles.numberText} buttonText={'.'} />
+                <Button onPressHandler={operatorButtonHandler} id={'='} button={styles.operatorButton} style={styles.operatorText} buttonText={'='} />
             </View>
         </View>
     );
