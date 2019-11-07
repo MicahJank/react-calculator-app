@@ -8,7 +8,7 @@ export default function App() {
 
   const [state, setState] = useState({
     previousNum: null,
-    currentNum: 0,
+    currentNum: null,
     operation: null
   });
 
