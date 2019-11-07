@@ -20,7 +20,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'black',
     color: 'white',
-    paddingTop: 20
+    paddingTop: 20,
+    padding: 10,
   },
   text: {
     color: '#fff'

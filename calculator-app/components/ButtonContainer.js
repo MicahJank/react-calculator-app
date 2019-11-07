@@ -33,7 +33,7 @@ const ButtonContainer = () => {
                 <Button button={styles.operatorButton} style={styles.operatorText} buttonText={'+'} />
             </View>
             <View style={styles.row}>
-                <Button button={styles.zeroButton} style={styles.numberText} buttonText={'0'} />
+                <Button button={styles.zeroButton} style={styles.zeroText} buttonText={'0'} />
                 <Button button={styles.numberButton} style={styles.numberText} buttonText={'.'} />
                 <Button button={styles.operatorButton} style={styles.operatorText} buttonText={'='} />
             </View>
@@ -47,7 +47,6 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         flexWrap: 'wrap',
         flex: 1,
-        padding: 10
     },
     row: {
         display: 'flex',
@@ -66,6 +65,11 @@ const styles = StyleSheet.create({
     otherText: {
         color: '#000',
         fontSize: 35
+    },
+    zeroText: {
+        color: '#fff',
+        fontSize: 35,
+        marginLeft: 30
     },
     numberButton: {
         display: 'flex',
@@ -106,7 +110,7 @@ const styles = StyleSheet.create({
         borderRadius: 50,
         flex: 2,
         margin: 5,
-        paddingLeft: 30
+        
     }
 })
 
