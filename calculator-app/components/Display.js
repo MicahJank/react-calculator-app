@@ -3,11 +3,11 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 
-const Display = () => {
+const Display = ( { displayState }) => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.display}>0</Text>
+            <Text style={styles.display}>{displayState.currentNum}</Text>
         </View>
     );
 };
