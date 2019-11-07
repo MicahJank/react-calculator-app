@@ -12,7 +12,7 @@ const ButtonContainer = () => {
                 <Button button={styles.otherButton} style={styles.otherText} buttonText={'AC'} />
                 <Button button={styles.otherButton} style={styles.otherText} buttonText={'+/-'} />
                 <Button button={styles.otherButton} style={styles.otherText} buttonText={'%'} />
-                <Button button={styles.operatorButton} style={styles.operatorText} buttonText={'/'} />
+                <Button button={styles.operatorButton} style={styles.operatorText} buttonText={'÷'} />
             </View>
             <View style={styles.row}>
                 <Button button={styles.numberButton} style={styles.numberText} buttonText={'7'} />
