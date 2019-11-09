@@ -29,7 +29,8 @@ const ButtonContainer = ( { state, setState } ) => {
         // TODO: Change division symbol to be an icon not a computer button
         <View style={styles.container}>
             <View style={styles.row}>
-                <Button onPressHandler={otherButtonHandler} button={styles.otherButton} style={styles.otherText} buttonText={'AC'} />
+                <Button onPressHandler={otherButtonHandler} button={state.currentNum ? styles.hidden : styles.otherButton} style={styles.otherText} buttonText={'AC'} />
+                <Button onPressHandler={otherButtonHandler} button={state.currentNum ? styles.otherButton : styles.hidden} style={styles.otherText} buttonText={'C'} />
                 <Button onPressHandler={otherButtonHandler} button={styles.otherButton} style={styles.otherText} buttonText={'+/-'} />
                 <Button onPressHandler={otherButtonHandler} button={styles.otherButton} style={styles.otherText} buttonText={'%'} />
                 <Button onPressHandler={operatorButtonHandler} button={styles.operatorButton} style={styles.operatorText} buttonText={'÷'} />
@@ -121,6 +122,9 @@ const styles = StyleSheet.create({
         flex: 1,
         margin: 5
     },
+    hidden: {
+        display: 'none'
+    },  
     zeroButton: {
         display: 'flex',
         justifyContent: 'center',
