@@ -17,11 +17,11 @@ const ButtonContainer = ( { state, setState } ) => {
      }
     }
 
-    const operatorButtonHandler = (id) => {
+    const operatorButtonHandler = (id) => { 
 
     }
 
-    const otherButtonHandler = (id) => {
+    const otherButtonHandler = (id) => { 
 
     }
 
