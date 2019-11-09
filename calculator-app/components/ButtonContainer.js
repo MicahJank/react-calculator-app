@@ -7,7 +7,7 @@ import Button from './Button.js';
 const ButtonContainer = ( { state, setState } ) => {
 
 
-    // button functions
+    // the numberButtonHandler deals with the different number buttons such as 1, 2, 3 etc.
     const numberButtonHandler = (num) => {
      if(!state.operation) {
          setState({
@@ -17,11 +17,13 @@ const ButtonContainer = ( { state, setState } ) => {
      }
     }
 
-    const operatorButtonHandler = (id) => { 
+    // the operatorButtonhandler deals with all the operation buttons such as addition subtraction, etc.
+    const operatorButtonHandler = (operator) => { 
 
     }
 
-    const otherButtonHandler = (id) => { 
+    // the otherButtonHandler deals with the buttons such as AC, C, +/- and %
+    const otherButtonHandler = (type) => { 
 
     }
 
