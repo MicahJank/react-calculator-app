@@ -24,7 +24,32 @@ const ButtonContainer = ( { state, setState } ) => {
 
     // the otherButtonHandler deals with the buttons such as AC, C, +/- and %
     const otherButtonHandler = (type) => { 
+        // all-clear should reset the entire state back to null
+        switch(type) {
+            case 'AC':
+                setState({
+                previousNum: null,
+                currentNum: null,
+                operation: null
+            });
+            break;
 
+            // clear should simply clear the current numbers in the display, it should not affect the currentOperation or the previous number/s that are in storage.
+            case 'C':
+                setState({
+                    ...state,
+                    currentNum: null
+                });
+                break;
+
+            default: // shouldnt ever get here. But if somehow they do, it just resets the state completely
+                setState({
+                    previousNum: null,
+                    currentNum: null,
+                    operation: null
+                });
+                break;
+        }
     }
 
     return (
