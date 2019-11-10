@@ -42,6 +42,22 @@ const ButtonContainer = ( { state, setState } ) => {
                 });
                 break;
 
+            // the + - button should take whatever the currentNum is and replace it with the opposite, i.e. 1 turns to -1 2 turns to -2 etc.
+            case '+/-':
+                setState({
+                    ...state,
+                    currentNum: -state.currentNum
+                });
+                break;
+
+            // the percentage button take the currentNum and divides it by 100 and replaces the currentNum with the divided result
+            case '%':
+                setState({
+                    ...state,
+                    currentNum: state.currentNum / 100
+                });
+                break;
+
             default: // shouldnt ever get here. But if somehow they do, it just resets the state completely
                 setState({
                     previousNum: null,
