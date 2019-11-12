@@ -4,6 +4,8 @@ import { StyleSheet, View } from 'react-native';
 
 import Button from './Button.js';
 
+import { roundPercentage } from '../utils/operations.js';
+
 const ButtonContainer = ( { state, setState } ) => {
 
 
@@ -52,9 +54,11 @@ const ButtonContainer = ( { state, setState } ) => {
 
             // the percentage button take the currentNum and divides it by 100 and replaces the currentNum with the divided result
             case '%':
+                
+                const number = roundPercentage(state.currentNum);
                 setState({
                     ...state,
-                    currentNum: state.currentNum / 100
+                    currentNum: number
                 });
                 break;
 
