@@ -1,15 +1,10 @@
-import { Decimal } from 'decimal.js';
 import * as math from 'mathjs';
 // a place to store all the calculator operation functions
 
-// const config = { };
-// const math = create(all, config);
-
-// math.config({
-//     number: 'BigNumber',
-//     precision: 64
-// });
-
+// addition function
+export const addNumbers = (num1, num2) => {
+    
+}
 
 
 // percentage rounding function

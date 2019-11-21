@@ -11,17 +11,30 @@ const ButtonContainer = ( { state, setState } ) => {
 
     // the numberButtonHandler deals with the different number buttons such as 1, 2, 3 etc.
     const numberButtonHandler = (num) => {
-     if(!state.operation) {
-         setState({
-             ...state,
-             currentNum: state.currentNum ? `${state.currentNum}${num}` : `${num}`
-         });
-     }
+        setState({
+            ...state,
+            currentNum: state.currentNum ? `${state.currentNum}${num}` : `${num}`,
+        });
     }
 
     // the operatorButtonhandler deals with all the operation buttons such as addition subtraction, etc.
-    const operatorButtonHandler = (operator) => { 
+    const operatorButtonHandler = (operator) => {
+        setState({
+            ...state,
+            operation: operator
+        }); 
+       switch(operator) {
+           case '+':
+              
 
+           default: // shouldnt ever get here. But if somehow they do, it just resets the state completely
+            setState({
+                prevNum: null,
+                currentNum: null,
+                operation: null,
+            });
+            break;
+       }
     }
 
     // the otherButtonHandler deals with the buttons such as AC, C, +/- and %
@@ -30,9 +43,9 @@ const ButtonContainer = ( { state, setState } ) => {
         switch(type) {
             case 'AC':
                 setState({
-                previousNum: null,
-                currentNum: null,
-                operation: null
+                    prevNum: null,
+                    currentNum: null,
+                    operation: null,
             });
             break;
 
@@ -64,13 +77,15 @@ const ButtonContainer = ( { state, setState } ) => {
 
             default: // shouldnt ever get here. But if somehow they do, it just resets the state completely
                 setState({
-                    previousNum: null,
+                    prevNum: null,
                     currentNum: null,
-                    operation: null
+                    operation: null,
                 });
                 break;
         }
     }
+
+    console.log(state); 
 
     return (
         // TODO: Change division symbol to be an icon not a computer button

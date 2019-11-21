@@ -7,9 +7,9 @@ import ButtonContainer from './components/ButtonContainer.js';
 export default function App() {
 
   const [state, setState] = useState({
-    previousNum: null,
+    prevNum: null,
     currentNum: null,
-    operation: null
+    operation: null,
   });
 
   return (
