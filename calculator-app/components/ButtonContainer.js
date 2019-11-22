@@ -21,7 +21,7 @@ const ButtonContainer = ( { state, setState } ) => {
     const operatorButtonHandler = (operator) => {
         setState({
             ...state,
-            operation: operator
+            operation: operator 
         }); 
        switch(operator) {
            case '+':
