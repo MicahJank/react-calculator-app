@@ -11,7 +11,7 @@ const ButtonContainer = ( { state, setState } ) => {
 
     // the numberButtonHandler deals with the different number buttons such as 1, 2, 3 etc.
     const numberButtonHandler = (num) => {
-        setState({
+        setState({ 
             ...state,
             currentNum: state.currentNum ? `${state.currentNum}${num}` : `${num}`,
         });
