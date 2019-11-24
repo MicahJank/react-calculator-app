@@ -24,7 +24,7 @@ const ButtonContainer = ( { state, setState } ) => {
             operation: operator 
         }); 
        switch(operator) {
-           case '+':
+           case '+': 
               
 
            default: // shouldnt ever get here. But if somehow they do, it just resets the state completely
