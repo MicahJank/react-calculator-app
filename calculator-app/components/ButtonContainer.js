@@ -45,7 +45,7 @@ const ButtonContainer = ( { state, setState } ) => {
                 setState({
                     prevNum: null,
                     currentNum: null,
-                    operation: null,
+                    operation: null, 
             });
             break;
 
