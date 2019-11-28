@@ -11,7 +11,7 @@ const Button = ({ buttonText, style, button, onPressHandler }) => {
         }} style={button} >
             <Text style={style}>{buttonText}</Text>  
         </TouchableOpacity> 
-    );
+    ); 
 };
 
 export default Button; 
