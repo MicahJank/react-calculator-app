@@ -12,7 +12,7 @@ const Display = ( { displayState }) => {
     );
 };
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({ 
     container: {
         width: '100%'
     },
