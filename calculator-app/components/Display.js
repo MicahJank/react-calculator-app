@@ -24,4 +24,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default Display;
+export default Display; 
