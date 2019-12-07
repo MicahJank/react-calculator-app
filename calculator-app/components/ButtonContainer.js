@@ -47,7 +47,7 @@ const ButtonContainer = ( { state, setState } ) => {
                     currentNum: null,
                     operation: null, 
             });
-            break;
+            break; 
 
             // clear should simply clear the current numbers in the display, it should not affect the currentOperation or the previous number/s that are in storage.
             case 'C':
