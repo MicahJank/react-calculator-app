@@ -18,7 +18,7 @@ export const roundPercentage = num => { //TODO FIGURE OUT HOW TO GET ERROR TO RE
             console.log(newNum);
         } else {
             newNum = Number.parseFloat(Number.parseFloat(num / 100).toFixed(20));
-        }
+        } 
         
     } catch (e) {
         if(e instanceof RangeError) {
