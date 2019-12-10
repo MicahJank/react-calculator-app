@@ -9,8 +9,8 @@ const Button = ({ buttonText, style, button, onPressHandler }) => {
         <TouchableOpacity onPress={() => {
             onPressHandler(buttonText)
         }} style={button} >
-            <Text style={style}>{buttonText}</Text>  
-        </TouchableOpacity>   
+            <Text style={style}>{buttonText}</Text>   
+        </TouchableOpacity>    
     ); 
 };
 
