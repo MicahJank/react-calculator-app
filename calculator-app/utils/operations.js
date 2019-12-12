@@ -21,7 +21,7 @@ export const roundPercentage = num => { //TODO FIGURE OUT HOW TO GET ERROR TO RE
         } 
         
     } catch (e) {
-        if(e instanceof RangeError) {
+        if(e instanceof RangeError) { 
             console.log(e, true);
         } else {
             console.log(e, false);
